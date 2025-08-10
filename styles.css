@@ -1508,21 +1508,23 @@ top: 0px;
         padding: 12px;
       }
 }
-/* FULL-BLEED HERO */
+/* =========================
+   FULL‑BLEED HERO (Desktop)
+   ========================= */
 .assignment-section.hero.has-bg{
   position: relative;
-  width: 100vw;                 /* take full viewport width */
-  margin-left: 50%;             /* full-bleed trick */
+  width: 100vw;                 /* full width (desktop) */
+  margin-left: 50%;             /* full‑bleed trick */
   transform: translateX(-50%);  /* center the 100vw section */
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 5;                       /* no space between text + form */
-  padding: 0;                   /* no inner padding */
-  min-height: 100vh;            /* increase this to 120vh/900px if you want taller */
+  gap: 0;                       /* no gap between columns */
+  padding: 0;                   /* inner padding handled per child */
+  min-height: 100vh;            /* adjust to 120vh if you want taller */
   color: #fff;
-
 }
 
+/* Background layers */
 .assignment-section.hero.has-bg .bg-img{
   position: absolute; inset: 0;
   background-image: var(--bg-img);
@@ -1530,7 +1532,6 @@ top: 0px;
   background-position: var(--bg-position-x, center) var(--bg-position-y, center);
   z-index: 0;
 }
-
 .assignment-section.hero.has-bg .bg-overlay{
   position: absolute; inset: 0;
   background: #061024;
@@ -1538,84 +1539,111 @@ top: 0px;
   z-index: 0;
 }
 
-/* inner columns: pad only inside the content block, not on the right */
+/* Content / Form columns */
 .assignment-section.hero.has-bg .content{
   position: relative; z-index: 1;
-  padding: clamp(24px, 6vw, 64px);   /* left column padding only */
+  padding: clamp(24px, 6vw, 64px);
 }
 .assignment-section.hero.has-bg .form-container{
   position: relative; z-index: 1;
-  margin: 0;                        /* ensure it touches the right edge */
+  margin: 0;                        /* touch right edge */
   padding: clamp(18px, 2.5vw, 26px);
-  border-top-right-radius: 0;       /* visually flush with right edge */
+  border-top-right-radius: 0;       /* flush with right edge */
   border-bottom-right-radius: 0;
-  justify-self: end;                /* snap to right in the grid */
-  width: min(520px, 100%);          /* keep a nice max width */
+  justify-self: end;                /* snap to right */
+  width: min(520px, 100%);          /* cap width */
 }
 
-/* glass look with adjustable transparency/blur */
+/* Glass look */
 .form-container.glass{
-  background: rgba(255,255,255, var(--form-opacity,100%));
-  backdrop-filter: blur(var(--form-blur, 1px));
+  /* sane defaults; tweak inline via --form-opacity / --form-blur */
+  background: rgba(255,255,255, var(--form-opacity, .35));
+  backdrop-filter: blur(var(--form-blur, 12px));
   -webkit-backdrop-filter: blur(var(--form-blur, 12px));
-  border: 1px solid rgba(196, 28, 28, 0.25);
+  border: 1px solid rgba(255,255,255,.25);
   border-radius: 16px;
-  box-shadow: 0 18px 50px rgba(255, 255, 255, 0.28);
+  box-shadow: 0 18px 50px rgba(0,0,0,.28);
 }
 
-/* inputs slightly translucent */
+/* Inputs */
 .form-container.glass .form-control,
 .form-container.glass .input-group-text,
 .form-container.glass select{
-  background: rgba(255,255,255,.82);
-  border: 1px solid rgba(0,0,0,.1);
+  background: rgba(255,255,255,.86);
+  border: 1px solid rgba(0,0,0,.12);
   color: #0b1220;
 }
 
-@media (max-width: 992px){
-  .assignment-section.hero.has-bg{
-    grid-template-columns: 1fr;
-  }
-  .assignment-section.hero.has-bg .form-container{
-    justify-self: stretch;          /* full width on mobile */
-    border-top-right-radius: 16px;
-    border-bottom-right-radius: 16px;
-  }
-}
+/* Brand badge (logo overlay) */
 .brand-badge{
   position: absolute; 
   top: 16px; 
   left: 20px; 
-  z-index: 2;                      /* above the overlay */
+  z-index: 2;                       /* above overlay */
   display: flex; 
   align-items: center; 
   gap: 10px;
   padding: 8px 12px;
   text-decoration: none;
   color: #e9f2ff;
-  background: rgba(6,16,36,.45);   /* subtle plate */
+  background: rgba(6,16,36,.45);
   border: 1px solid rgba(255,255,255,.15);
   border-radius: 12px;
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
 .brand-badge img{
-  width: 150px; 
-  
-  object-fit: contain; 
+  width: 150px;
+  max-width: 42vw;                  /* avoid overflow if logo is wide */
+  object-fit: contain;
   border-radius: 8px;
 }
-.brand-badge .brand-label{
-  display:flex; 
-  flex-direction:column; 
-  line-height:1.05
-}
-.brand-badge .brand-label strong{
-  font-size: 14px; 
-  letter-spacing: .04em
-}
-.brand-badge .brand-label span{
-  font-size: 11px; 
-  opacity: .85
+.brand-badge .brand-label{ display:flex; flex-direction:column; line-height:1.05 }
+.brand-badge .brand-label strong{ font-size: 14px; letter-spacing:.04em }
+.brand-badge .brand-label span{ font-size: 11px; opacity:.85 }
+
+/* =========================
+   RESPONSIVE (Tablets/Phones)
+   ========================= */
+@media (max-width: 992px){
+  .assignment-section.hero.has-bg{
+    grid-template-columns: 1fr;     /* stack content above form */
+  }
+  .assignment-section.hero.has-bg .form-container{
+    justify-self: stretch;          /* full width */
+    border-top-right-radius: 16px;  /* restore rounded corners */
+    border-bottom-right-radius: 16px;
+    width: auto;
+    margin: 8px 16px 24px;          /* breathing space on sides */
+  }
 }
 
+@media (max-width: 768px){
+  /* remove full‑bleed trick on phones to prevent side scroll */
+  .assignment-section.hero.has-bg{
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+    min-height: 100svh;             /* better than 100vh on mobile */
+    /* mobile focal point (adjust as needed) */
+    --bg-position-x: center;
+    --bg-position-y: 30%;
+  }
+  .assignment-section.hero.has-bg .content{
+    padding: 24px 16px 8px;         /* tighter */
+  }
+  .assignment-section.hero.has-bg .form-container{
+    padding: 16px;
+  }
+  .brand-badge{
+    top: 12px; left: 12px;
+    padding: 6px 8px;
+    gap: 8px;
+  }
+  .brand-badge img{
+    width: 120px;                   /* smaller logo on phones */
+    max-width: 60vw;
+  }
+  .brand-badge .brand-label strong{ font-size: 12px; }
+  .brand-badge .brand-label span{ font-size: 10px; }
+}
