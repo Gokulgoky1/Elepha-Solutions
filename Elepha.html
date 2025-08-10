@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Elepha Solutions provides full‑stack IT services, Interview‑as‑a‑Service, Recruitment‑as‑a‑Service, and technical workshops. Build, secure, and scale with a reliable technology partner.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elepha Solutions | IT Services, Recruitment & Technical Workshops</title>
+    <link rel="icon" href="WebPage/elipha.png"><!-- keep path; replace file with your logo -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section
+      class="assignment-section hero has-bg"
+      style="
+    --bg-img: url('./WebPage/elepha_BG.png');  /* your image path */
+    --overlay-opacity: 0.55;                     /* darker/lighter overall */
+    --form-opacity: 0.35;                        /* more/less transparent form */
+    --form-blur: 1px;                           /* blur behind form */
+    --bg-position-x: center;                     /* left | center | right */
+    --bg-position-y: 20%;                        /* lower % = move image up; try 10–30% */
+  "><a href="#top" class="brand-badge">
+      <img src="./WebPage/elipha.png" alt="Elepha Solutions">
+      <div class="brand-label">
+        <!-- <strong>ELEPHA SOLUTIONS</strong>
+        <span>CHANCE TO ELEVATE</span> -->
+      </div>
+    </a>
+      <!-- background layers -->
+      <div class="bg-img"></div>
+      <div class="bg-overlay"></div>
+
+      <div class="content">
+          <h1>Build. Secure. Scale. With Elepha Solutions.</h1>
+          <p>We deliver end‑to‑end IT services, on‑demand interview support, recruitment solutions, and technical workshops—so your business can grow with confidence.</p>
+      </div>
+
+      <div class="form-container glass">
+          <h3>What <span style="color: #2B6FF4;">Service</span> Do You Need?</h3>
+          <p>Share a few details and we’ll get back to you.</p>
+
+          <form id="bookingForm" autocomplete="off">
+              <div class="mb-3">
+                  <label class="formGroupExampleInput">Your Name</label>
+                  <input type="text" name="Name" class="form-control" placeholder="Full name" required>
+              </div>
+              <div class="mb-3">
+                  <label class="formGroupExampleInput">Work Email</label>
+                  <input type="email" name="Email" class="form-control" placeholder="you@company.com" required>
+              </div>
+              <div class="mb-3">
+                  <label class="formGroupExampleInput">Mobile / WhatsApp (with Country Code)</label>
+                  <div class="input-group">
+                      <span class="input-group-text" id="inputGroupPrepend2">+</span>
+                      <input type="text" autocomplete="false" readonly onfocus="this.removeAttribute('readonly');" name="Whatsapp" class="form-control" placeholder="e.g., 9198XXXXXXX" required>
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label class="formGroupExampleInput">Company / Organization</label>
+                  <input autocomplete="false" readonly onfocus="this.removeAttribute('readonly');" type="text" name="Company" class="form-control" placeholder="Company name" required>
+              </div>
+
+              <div class="mb-3 form-group">
+                  <label class="formGroupExampleInput">Service Category</label>
+                  <select title="category" name="Category" id="categorySelect" class="form-control">
+                      <option>IT Services & Consulting</option>
+                      <option>Interview as a Service</option>
+                      <option>Recruitment as a Service</option>
+                      <option>Technical Workshops</option>
+                      <option>Other</option>
+                  </select>
+              </div>
+
+              <div class="mb-3" id="otherCategoryField" style="display: none;">
+                <label class="formGroupExampleInput">Service Name</label>
+                  <input type="text" name="Other" class="form-control" placeholder="Please specify the service" autocomplete="off">
+              </div>
+
+              <input type="hidden" name="referral" id="referral">
+              <button type="submit" id="button" class="btn btn-primary w-100">Submit Now</button>
+          </form>
+      </div>
+    </section>
+
+    <div class="stats-container">
+        <div class="stat-item">
+          <div class="icon-wrapper student-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path style="color: #4a4af4;" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="number student-number">50+</p>
+            <p class="label stat-label">Business Features Delivered</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="icon-wrapper assignment-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path style="color: #ff4040;" d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm-2 14l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="number assignment-number">99.9%</p>
+            <p class="label stat-label">Managed Uptime on Deployments</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="icon-wrapper project-icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+              <path style="color: #d946ef" d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="number project-number">10+</p>
+            <p class="label stat-label">Industries Served</p>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="service-container container">
+      <div class="section-title">
+        <span class="tag">OUR SERVICES</span>
+        <h2 class="title">What We Offer</h2>
+      </div>
+
+      <ul class="services-list">
+        <li class="service-item">
+          <div class="service-header">IT Services & Consulting</div>
+          <div class="service-content">
+            <p>Strategy to delivery across web, mobile, cloud, DevOps, and cybersecurity.</p>
+            <ul>
+              <li><b>IT Consulting:</b> Digital transformation, IT strategy and planning, cloud adoption strategy</li>
+              <li><b>Managed IT:</b> Infra management, network monitoring & 24/7 help desk</li>
+              <li><b>Software Development:</b> Websites, portals, mobile apps, custom APIs</li>
+              <li><b>Cybersecurity:</b> Risk assessments, compliance, endpoint security & SOC</li>
+              <li><b>Cloud Services:</b> Migration, AWS/Azure/Google Cloud services, backup & disaster recovery</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <div class="service-header">Interview as a Service (IaaS)</div>
+          <div class="service-content">
+            <p>On‑demand, tech‑savvy interviewers who reduce no‑shows, reneges, and time‑to‑hire—so HR can focus on high‑value work.</p>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <div class="service-header">Recruitment as a Service (RaaS)</div>
+          <div class="service-content">
+            <p>Faster shortlists, expert screening, and zero hiring delays.</p>
+            <ul>
+              <li><b>Technical Hiring:</b> Dev, QA, Data, DevOps, Network roles—FT & contract</li>
+              <li><b>Executive Search:</b> CTOs, PMs, and IT leadership</li>
+              <li><b>RPO:</b> End‑to‑end recruitment management</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="service-item">
+          <div class="service-header">Technical Workshops & Training</div>
+          <div class="service-content">
+            <p>Upskilling programs for teams and individuals with hands‑on labs.</p>
+            <ul>
+              <li><b>Corporate Training:</b> Python, Java, AWS, DevOps, Cybersecurity, etc.</li>
+              <li><b>Certification Prep:</b> AWS, Azure, PMP, CCNA, and more</li>
+              <li><b>Job‑Oriented Tracks:</b> Bootcamps, resume help, mock interviews</li>
+              <li><b>Soft Skills:</b> Communication, teamwork, leadership</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sticker">
+        <div class="sticker-title">Free Consultation</div>
+        <div class="sticker-desc">Let’s scope your needs and propose the best path to value.</div>
+      </div>
+    </div>
+
+    <div class="container ">
+      <div class="highlights-section container-left">
+        <h2 class="highlights-title">Why Choose Elepha?</h2>
+        <div class="highlights-grid">
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h3>Transparent Delivery</h3>
+              <p>Clear milestones, predictable timelines, and steady communication.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h3>Security‑First</h3>
+              <p>Best practices built into every layer—apps, infra, and people.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14v-1a4 4 0 00-4-4h-4"/>
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h3>Scalable by Design</h3>
+              <p>Cloud‑native architectures ready for growth and performance.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0z"/>
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h3>Flexible Engagements</h3>
+              <p>Fixed‑scope, T&M, or dedicated teams—fit for your stage.</p>
+            </div>
+          </div>
+
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div class="highlight-content">
+              <h3>Responsive Support</h3>
+              <p>Fast turnaround and proactive communication, always.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reframed process to fit services -->
+    <div class="step-flex">
+      <header>
+        <div class="container-steps">
+          <h1>Our 5‑Step Project Flow</h1>
+          <p>Your path from idea to production.</p>
+        </div>
+      </header>
+
+      <section class="process-steps">
+        <div class="container-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h2>Discovery</h2>
+            <p>Understand goals, constraints, and success metrics.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h2>Solution Design</h2>
+            <p>Architecture, roadmap, and milestones.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h2>Build & Integrate</h2>
+            <p>Secure development with iterative demos.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h2>Test & Harden</h2>
+            <p>QA, security checks, and performance tuning.</p>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <h2>Deploy & Support</h2>
+            <p>Go‑live, monitoring, and continuous improvement.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Optional lead-magnet strip (kept original structure but repurposed) -->
+    <div class="container-earn" id="earn-while-you-learn">
+      <header class="header-earn">
+          <h1>Partner with Elepha</h1>
+          <p>Grow faster with reliable engineering and faster hiring.</p>
+      </header>
+
+      <main class="programs">
+          <div class="program-card">
+            <div class="sticker-earn">Popular</div>
+              <div class="icon-earn">🧪</div>
+              <h2>Interview as a Service</h2>
+              <ul class="benefits">
+                  <li>On‑demand expert interviewers</li>
+                  <li>Lower no‑shows & reneges</li>
+                  <li>Shorter time‑to‑hire</li>
+                  <li>Structured feedback & reports</li>
+              </ul>
+              <a target="_blank" href="https://wa.me/918122884236?text=Hi, I’d like to know more about Elepha Solutions’ IaaS." class="cta-button whatsapp-btn">Chat on WhatsApp</a>
+          </div>
+
+          <div class="program-card">
+              <div class="icon-earn">💼</div>
+              <h2>Recruitment as a Service</h2>
+              <ul class="benefits">
+                  <li>Full‑time & contract tech hiring</li>
+                  <li>Executive search for IT leaders</li>
+                  <li>RPO: end‑to‑end hiring ownership</li>
+                  <li>Faster shortlists, better fit</li>
+              </ul>
+              <a target="_blank" href="#" class="cta-button apply-btn">Request a Callback</a>
+          </div>
+      </main>
+    </div>
+
+    <div class="container">
+        <span class="title-tag">TECH CAPABILITIES</span>
+        <h1 class="main-title">We Specialize In</h1>
+
+        <div class="cards-grid">
+          <div class="card blue">
+            <div class="icon-circle">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Security & Networks</h3>
+            <p class="card-text">#ZeroTrust #CloudSecurity #SOC #IAM #NetworkMonitoring #ThreatModeling</p>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <div class="card red">
+            <div class="icon-circle">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v6m0 14v-6m6-4h-6m-6 0H4"/>
+              </svg>
+            </div>
+            <h3 class="card-title">AI & Data</h3>
+            <p class="card-text">#ML #NLP #Analytics #Dashboards #Forecasting #ModelOps</p>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <div class="card purple">
+            <div class="icon-circle">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Software Engineering</h3>
+            <p class="card-text">#WebApps #Mobile #APIs #Testing #DevOps #CodeQuality</p>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <div class="card violet">
+            <div class="icon-circle">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Cloud & Distributed</h3>
+            <p class="card-text">#Kubernetes #Serverless #MultiCloud #Edge #Observability</p>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <div class="card green">
+            <div class="icon-circle">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Data Platforms</h3>
+            <p class="card-text">#ETL #DataPipelines #BI #BigData #DataViz</p>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </div>
+
+          <div class="card sky">
+            <div class="icon-circle">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Project Delivery</h3>
+            <p class="card-text">#Agile #Scrum #RiskMgmt #DevOpsAutomation #ITGovernance</p>
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14m-7-7l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+        <p class="view-all-btn">And more—tailored to your stack.</p>
+    </div>
+
+    <div class="testimonials-container">
+        <h2 class="testimonials-title">What Clients Say</h2>
+        <div class="testimonials-wrapper">
+          <div class="testimonial-card">
+            <p class="quote">"Elepha accelerated our release cycle with solid CI/CD and observability. Rock‑steady delivery and great communication."</p>
+            <div class="subject">Cloud & DevOps</div>
+            <div class="stats">
+              <div class="score">Cycle Time: −35%</div>
+              <div class="stars">★★★★★</div>
+            </div>
+            <div class="location">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              SaaS, UK
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="quote">"Interview as a Service changed our hiring. Better signal, faster decisions, and candidates loved the experience."</p>
+            <div class="subject">IaaS</div>
+            <div class="stats">
+              <div class="score">Time‑to‑Hire: −40%</div>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="location">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              FinTech, India
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="quote">"Their security assessment and hardening gave us confidence to scale. Practical, thorough, and on time."</p>
+            <div class="subject">Cybersecurity</div>
+            <div class="stats">
+              <div class="score">Incidents: −70%</div>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="location">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              Healthcare, UAE
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="quote">"The workshops were hands‑on and outcome‑driven. Our team is shipping cleaner code and deploying with confidence."</p>
+            <div class="subject">Technical Workshops</div>
+            <div class="stats">
+              <div class="score">Team Confidence: ↑</div>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <div class="location">
+              <svg class="location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              EdTech, UK
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <p style="text-align: center; color: #a0aec0; margin: 2rem 0 1rem 0; font-size: 1.1rem;">
+            Worked with Elepha? We’d love your feedback. 😊
+          </p>
+          <a href="#" class="feedback-button">Share Your Experience</a>
+        </div>
+    </div>
+
+<section class="faq-section">
+  <div class="container">
+      <h2 class="faq-heading">Frequently Asked Questions</h2>
+      <div class="faq-container">
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>What services does Elepha Solutions provide?</h3>
+                  <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>IT services & consulting, Interview‑as‑a‑Service, Recruitment‑as‑a‑Service, and technical workshops & training.</p>
+              </div>
+          </div>
+
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Can you support AWS/Azure/GCP?</h3>
+                  <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Yes. We handle migration, daily ops, CI/CD, observability, and cost optimization across major clouds.</p>
+              </div>
+          </div>
+
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Do you offer ongoing support?</h3>
+                  <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Absolutely—through managed services, SLAs, and responsive support channels.</p>
+              </div>
+          </div>
+
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>How fast can you help with hiring?</h3>
+                  <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Our IaaS and RaaS models provide rapid shortlists, structured interviews, and faster decisions.</p>
+              </div>
+          </div>
+
+          <div class="faq-item">
+              <div class="faq-question">
+                  <h3>Do you run on‑site or remote trainings?</h3>
+                  <span class="faq-toggle">+</span>
+              </div>
+              <div class="faq-answer">
+                  <p>Both. We customize curricula for your stack, including hands‑on labs and certification prep.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="chat-widget">
+  <button class="chat-button" onclick="toggleChat()">
+      <div class="notification-badge">1</div>
+      <svg class="chat-icon" viewBox="0 0 24 24">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+      </svg>
+  </button>
+
+  <div class="popup-message" id="popupMessage">
+      <button class="close-popup" onclick="closePopup()">
+          <svg class="close-icon" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+      </button>
+      <p>Hello! 👋 How can Elepha Solutions help you today?</p>
+  </div>
+
+  <div class="chat-window" id="chatWindow">
+      <a target="_blank" href="https://wa.me/918122884236?text=Hello, I’d like to know more about Elepha Solutions’ services." class="chat-option whatsapp-option">
+          <svg class="platform-icon" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Continue on WhatsApp
+      </a>
+  </div>
+</div>
+
+  <footer>
+    <div class="footer-section">
+      <h3>Connect With Us</h3>
+      <div class="social-links">
+        <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://wa.me/918122884236?text=Hello, I’d like to know more about Elepha Solutions’ services."><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-telegram"></i></a>
+        <a target="_blank" href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <hr>
+    <div>
+      <p>&copy; 2025 Elepha Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+    <script>
+      document.querySelectorAll('.service-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const item = header.parentElement;
+          item.classList.toggle('active');
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const faqItems = document.querySelectorAll(".faq-item");
+        faqItems.forEach((item) => {
+            const question = item.querySelector(".faq-question");
+            question.addEventListener("click", () => {
+                item.classList.toggle("active");
+            });
+        });
+      });
+
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      document.getElementById('categorySelect').addEventListener('change', function() {
+        var otherCategoryField = document.getElementById('otherCategoryField');
+        if (this.value === 'Other') {
+            otherCategoryField.style.display = 'block';
+        } else {
+            otherCategoryField.style.display = 'none';
+        }
+      });
+
+      const referral = getQueryParam('ref');
+      document.getElementById('button').innerHTML = 'Submit Now';
+      if(referral) {
+          document.getElementById('referral').value = referral;
+      }
+
+      document.getElementById('bookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('button').innerHTML = '<img class="loading" src="WebPage/loading.gif" alt="Loading...">';
+        const formData = new FormData(this);
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzyaYxa98O8hnuVtneO474V5jA9dwyRm66z8PGnfl7FuLCVTfn5PO3tVvs4DhS5Yvyu/exec'; // Replace with your own Apps Script URL
+
+        fetch(scriptURL, { method: 'POST', body: formData, mode: 'no-cors' })
+            .then(response => {
+                alert('Form submitted successfully');
+                this.reset();
+                document.getElementById('button').innerHTML = 'Submit Now';
+            })
+            .catch(error =>{
+                alert('Error!', error.message)
+                document.getElementById('button').innerHTML = '<img class="loading" src="WebPage/images/loading.gif" alt="Loading...">';
+            });
+      });
+
+      let popupShown = false;
+      window.addEventListener('scroll', () => {
+          if (!popupShown && window.scrollY > 1000) {
+              document.getElementById('popupMessage').classList.add('show');
+              popupShown = true;
+          }
+      });
+
+      function closePopup() {
+          document.getElementById('popupMessage').classList.remove('show');
+      }
+
+      function toggleChat() {
+          const chatWindow = document.getElementById('chatWindow');
+          const popupMessage = document.getElementById('popupMessage');
+          const notificationBadge = document.querySelector('.notification-badge');
+
+          if (chatWindow.classList.contains('show')) {
+              chatWindow.classList.remove('show');
+          } else {
+              chatWindow.classList.add('show');
+              popupMessage.classList.remove('show');
+              notificationBadge.style.display = 'none';
+          }
+      }
+    </script>
+</body>
+</html>
